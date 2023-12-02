@@ -574,7 +574,8 @@ footer .social-icon-link:focus {
 /* form-footer */
 
 .form-subscrible{
-
+    display: flex;
+    
 }
 
 .form-subscribe-input{
