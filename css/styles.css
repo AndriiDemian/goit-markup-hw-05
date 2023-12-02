@@ -722,25 +722,31 @@ footer .social-icon-link:focus {
 
 .modal-btn-close-icone {
     fill: #2E2F42;
-    transition: fill 250ms linear;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 0;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     top: 24px;
     right: 24px;
-    padding: 8px;
-    border-radius: 50px;
+    border-radius: 50%;
     line-height: 0;
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.10);
     outline: 0px solid transparent;
-    transition: background-color 250ms linear;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close:hover .modal-btn-close-icone,
 .modal-btn-close:focus .modal-btn-close-icone {
     fill: #FFFFFF;
+    border: none;
 }
 
 .modal-btn-close:hover,
@@ -858,11 +864,22 @@ footer .social-icon-link:focus {
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     margin-right: 8px;
+    fill: transparent; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-checkbox {
+    
 }
 
 .modal-form-checkbox:checked + .accept-root > .modal-custom-checkbox {
     background-color: #404BBF;
     border-color: #404BBF;
+    border: none;
+    fill:#F4F4FD;
+
 }
 
 .modal-form-checkbox:focus + .accept-root > .modal-custom-checkbox {
@@ -887,7 +904,7 @@ footer .social-icon-link:focus {
 .btn-modal {
     display: block;
     padding: 16px 32px;
-    width: 159px;
+    min-width: 169px;
     height: 56px;
     margin: 24px auto;
     border: none;
@@ -896,9 +913,10 @@ footer .social-icon-link:focus {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15); 
     color: #FFF;
     text-align: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     
     /* Button Text */
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5; 
